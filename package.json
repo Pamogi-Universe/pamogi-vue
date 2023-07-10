@@ -1,0 +1,28 @@
+{
+  "name": "pamogi-vue",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.16.4",
+    "pinia": "^2.1.4",
+    "pocketbase": "^0.15.2",
+    "quasar": "^2.12.0",
+    "sanitize.css": "^13.0.0",
+    "vue": "^3.2.47",
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@quasar/vite-plugin": "^1.4.0",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "sass": "1.32.12",
+    "unplugin-vue-components": "^0.25.1",
+    "vite": "^4.3.9"
+  },
+  "packageManager": "yarn@3.6.0"
+}
