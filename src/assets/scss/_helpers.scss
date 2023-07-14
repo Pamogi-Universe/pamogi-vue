@@ -11,7 +11,11 @@
       
       // Create the rule
       .#{$prefix}-#{$i - 1} {
-        #{$property}: $spacing * $size;
+        #{$property}: ($spacing * 0.5) * $size;
+        @include screen-sm{
+          #{$property}: $spacing * $size;
+
+        }
       }
     }
 }

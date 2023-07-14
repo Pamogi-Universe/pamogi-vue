@@ -5,7 +5,11 @@ import quasarIconSet from "quasar/icon-set/mdi-v7"
 import '@quasar/extras/mdi-v7/mdi-v7.css'
 import 'quasar/src/css/index.sass';
 
-import {router} from "@/router";
+import {createPinia} from "pinia"
+
+const pinia = createPinia();
+
+
 
 import App from './App.vue'
 
@@ -13,13 +17,8 @@ import "sanitize.css";
 import "sanitize.css/forms.css";
 import "sanitize.css/typography.css";
 
-import {createPinia} from "pinia"
-
-const pinia = createPinia();
-
 const app = createApp(App);
 
-app.use(router);
 app.use(Quasar,{
     plugins:{
         Notify
@@ -27,5 +26,7 @@ app.use(Quasar,{
     iconSet:quasarIconSet
 });
 app.use(pinia);
+import {router} from "@/router";
+app.use(router);
 
 app.mount('#app')

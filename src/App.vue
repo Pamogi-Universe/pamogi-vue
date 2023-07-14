@@ -1,12 +1,16 @@
 
 <template>
-  <router-view />
+  <DefaultLayout />
 </template>
 
 <script>
 import {useAppStore} from "@/stores/app.js"
 import {mapActions} from "pinia"
+import DefaultLayout from "@/Layout/DefaultLayout.vue"
 export default {
+  components:{
+    DefaultLayout
+  },
     mounted(){
       window.addEventListener("resize",this.setWidth);
     },
@@ -39,4 +43,5 @@ body{
 #app{
  height:100%;
 }
+
 </style>

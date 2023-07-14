@@ -20,6 +20,5 @@ export const router = createRouter({
 });
 
 router.beforeEach(async (to, from) => {
-    console.log(isAuthenticated());
     if (!isAuthenticated() && to.name !== 'Login') return { name: 'Login' }
 })
