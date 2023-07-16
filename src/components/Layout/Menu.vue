@@ -3,6 +3,7 @@
         <q-tabs v-model="tab" align="justify" dense no-caps narrow-indicator>
             <q-tab :ripple="false" content-class="tab-content" class="text-primary" name="Home" label="Home" icon="mdi-home"></q-tab>
             <q-tab :ripple="false" content-class="tab-content" class="text-primary" name="Projects" label="Challenges" icon="mdi-magnify"></q-tab>
+            <img class="logo" src="@/assets/img/logo-small-purple.png" alt="logo">
             <q-tab :ripple="false" content-class="tab-content" class="text-primary" name="Tasks" label="Tasks" icon="mdi-clipboard-list">
                 <q-badge color="red" floating>5+</q-badge>
             </q-tab>
@@ -29,6 +30,10 @@
   bottom:0;
   box-shadow: 0 0 25px rgba(47,16,56,0.25);
   background-color:$white;
+  .logo{
+    height: 1rem;
+    margin: 0 0.75rem;
+  }
 }
 
 </style>

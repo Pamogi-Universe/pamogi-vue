@@ -1,0 +1,48 @@
+name: Deploy to demo env
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build-and-ftp-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          
+      - name: Set yarn verson
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: set version stable
+          
+      - name: Installing project dependencies
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install
+      
+      - name: build project
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: build
+      
+      - name: git checkout changes
+        run: git checkout .yarn/
+          
+      - name: ftp deploy
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: ftp.pamogi.org
+          username: pamog1764123
+          password: ${{ secrets.ftp_password }}
+          port: 21
+          protocol: ftp
+          local-dir: ./dist/
+          server-dir: app.pamogi.org/
+          dangerous-clean-slate: true
+          
