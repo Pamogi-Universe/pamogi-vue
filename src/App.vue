@@ -6,7 +6,7 @@
 <script>
 import {useAppStore} from "@/stores/app.js"
 import {mapActions} from "pinia"
-import DefaultLayout from "@/Layout/DefaultLayout.vue"
+import DefaultLayout from "@/layout/DefaultLayout.vue"
 export default {
   components:{
     DefaultLayout
