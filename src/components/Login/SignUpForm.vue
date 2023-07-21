@@ -2,11 +2,11 @@
     <div class="signup-form">
         <q-form @submit="register" ref="registerForm" greedy>
             <TheInput lazy-rules="ondemand" :readonly="loading" v-model="firstName" label="First name" :rules="[rules.required]"/>
-            <TheInput lazy-rules="ondemand" :readonly="loading" v-model="lastName" label="Last name" class="mt-5" :rules="[rules.required]" />
-            <TheInput lazy-rules="ondemand" :readonly="loading" v-model="email" label="Email" inputmode="email" class="mt-5" :rules="[rules.required, rules.email]" autocapitalize="off" />
-            <TheInput lazy-rules="ondemand" :readonly="loading" v-model="password" label="Password" type="password" class="mt-5" :rules="[rules.required,rules.minPasswordLength]" />
-            <TheCheckbox v-model="acceptTerms" label="I accept the terms and conditions" class="mt-5" />
-            <ThePrimaryButton color="primary" text-color="white" label="Sign up" class="full-width mt-5" type="submit" :loading="loading" />
+            <TheInput lazy-rules="ondemand" :readonly="loading" v-model="lastName" label="Last name" class="mt-2" :rules="[rules.required]" />
+            <TheInput lazy-rules="ondemand" :readonly="loading" v-model="email" label="Email" inputmode="email" class="mt-2" :rules="[rules.required, rules.email]" autocapitalize="off" />
+            <TheInput lazy-rules="ondemand" :readonly="loading" v-model="password" label="Password" type="password" class="mt-2" :rules="[rules.required,rules.minPasswordLength]" />
+            <TheCheckbox v-model="acceptTerms" label="I accept the terms and conditions" class="mt-2" />
+            <ThePrimaryButton color="primary" text-color="white" label="Sign up" class="full-width mt-2" type="submit" :loading="loading" />
             <div class="no-account-container">
                 <span class="span-no-account">Already have an account?</span>
                 <button class="btn-sign-up" text-color="primary" @click="$emit('toggleForm', 'login')">Log in</button>
@@ -90,7 +90,7 @@ import {mapActions} from "pinia"
             .no-account-container{
             display:flex;
             justify-content: center;
-            margin-top:1.5rem;
+            margin-top:1rem;
             .span-no-account{
                 color:#939393;
             }

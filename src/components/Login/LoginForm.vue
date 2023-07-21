@@ -2,8 +2,8 @@
     <div class="login-form">
         <q-form @submit="login" ref="loginForm" greedy>
             <TheInput lazy-rules="ondemand" :readonly="loading" v-model="email" label="Email" inputmode="email" :rules="[rules.required,rules.email]" autocapitalize="off" />
-            <TheInput lazy-rules="ondemand" :readonly="loading" v-model="password" label="Password" type="password" class="mt-5" :rules="[rules.required]" />
-            <ThePrimaryButton :loading="loading" label="Log in" class="full-width mt-5" type="submit" />
+            <TheInput lazy-rules="ondemand" :readonly="loading" v-model="password" label="Password" type="password" class="mt-2" :rules="[rules.required]" />
+            <ThePrimaryButton :loading="loading" label="Log in" class="full-width mt-2" type="submit" />
             <div class="no-account-container">
                 <span class="span-no-account">No account yet?</span>
                 <button class="btn-sign-up" text-color="primary" @click="$emit('toggleForm', 'signup')">Sign up</button>
@@ -63,7 +63,7 @@ import {mapActions} from "pinia"
         .no-account-container{
             display:flex;
             justify-content: center;
-            margin-top:1.5rem;
+            margin-top:1rem;
             .span-no-account{
                 color:#939393;
             }

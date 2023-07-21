@@ -48,7 +48,8 @@ export default {
 
 <style lang="scss" scoped>
 .login{
-    height:100vh;
+    height:100%;
+
     display:flex;
     width: 100%;;
     .left{
@@ -59,6 +60,7 @@ export default {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
 
         }
         display: none;
@@ -85,6 +87,8 @@ export default {
             min-width: 650px;
             width:40%;
             justify-content: center;
+            min-height: 100vh;
+            padding: 3rem 0;
 
         }
         width:100%;
@@ -134,7 +138,7 @@ export default {
         }
         .form-card{
             @include screen-sm{
-                padding: 4rem 4rem 3rem 4rem;
+                padding: 3rem 3rem 2rem 3rem;
             }
             padding: 2rem 2rem 1.5rem 2rem;
             width:100%;
